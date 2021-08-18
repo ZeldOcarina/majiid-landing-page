@@ -1,6 +1,7 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
+import respond from "../styles/abstracts/mediaqueries";
 
 import Button from "../components/Button";
 
@@ -18,6 +19,12 @@ const Wrapper = styled.section`
   }
 
   .btn {
+    ${respond(
+      "iphone-5",
+      css`
+        margin: 0 1rem;
+      `
+    )}
   }
 
   .container {
@@ -36,10 +43,7 @@ const Clients = () => {
   return (
     <Wrapper>
       <div className="container">
-        <h3 className="text-center">
-          More than 250 Dentals practices on their way to break 7 figures and
-          counting
-        </h3>
+        <h3 className="text-center">More than 250 Dentals practices on their way to break 7 figures and counting</h3>
         <div className="dentists-gallery">
           {dentists.map(
             ({

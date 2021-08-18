@@ -1,6 +1,7 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { getImage } from "gatsby-plugin-image";
+import respond from "../styles/abstracts/mediaqueries";
 
 import Button from "./Button";
 import Video from "./Video";
@@ -13,6 +14,14 @@ const Wrapper = styled.article`
     align-items: flex-start;
     justify-items: center;
     align-content: center;
+
+    ${respond(
+      "tab-port",
+      css`
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      `
+    )}
   }
 
   blockquote {
@@ -37,6 +46,14 @@ const Wrapper = styled.article`
   .logo {
     width: 20%;
     margin-bottom: 2rem;
+
+    ${respond(
+      "tab-port",
+      css`
+        margin-left: 50%;
+        transform: translateX(-50%);
+      `
+    )}
   }
 
   .video-wrapper {
@@ -50,6 +67,17 @@ const Wrapper = styled.article`
   .case-study-hr {
     margin: 3rem 0 5rem 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .btn {
+    ${respond(
+      "tab-port",
+      css`
+        margin-left: 50%;
+        transform: translateX(-50%);
+        width: max-content;
+      `
+    )}
   }
 `;
 

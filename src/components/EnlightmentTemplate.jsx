@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import respond from "../styles/abstracts/mediaqueries";
 
 import Button from "../components/Button";
 import Video from "../components/Video";
@@ -32,11 +33,37 @@ const Wrapper = styled.div`
     gap: 4rem;
     grid-template-columns: 1fr 1fr;
     margin: 4rem 0;
+
+    ${respond(
+      "phone-port",
+      css`
+        grid-template-columns: 1fr;
+      `
+    )}
   }
 
   .last-feature {
     width: 50%;
     margin: 0 auto;
+
+    h5,
+    p {
+      text-align: center;
+
+      ${respond(
+        "phone-port",
+        css`
+          text-align: left;
+        `
+      )}
+    }
+
+    ${respond(
+      "phone-port",
+      css`
+        width: 100%;
+      `
+    )}
   }
 
   .btn {
@@ -44,6 +71,13 @@ const Wrapper = styled.div`
     margin-top: 4rem;
     transform: translateX(-50%);
     text-transform: capitalize;
+
+    ${respond(
+      "phone-port",
+      css`
+        width: max-content;
+      `
+    )}
   }
 
   .enlightment-title {
@@ -52,6 +86,13 @@ const Wrapper = styled.div`
 
   .video-wrapper {
     width: 60%;
+
+    ${respond(
+      "phone-port",
+      css`
+        width: 100%;
+      `
+    )}
   }
 `;
 
@@ -99,8 +140,8 @@ const EnlightmentTemplate = ({
           </div>
         </div>
         <div className="last-feature">
-          <h5 className="text-center">{box5Title}</h5>
-          <p className="text-center">{box5Text}</p>
+          <h5>{box5Title}</h5>
+          <p>{box5Text}</p>
         </div>
         <Button>{cta}</Button>
         <Hr />

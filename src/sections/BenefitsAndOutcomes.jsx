@@ -1,6 +1,7 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import SectionTitle from "../components/SectionTitle";
+import respond from "../styles/abstracts/mediaqueries";
 
 import svg1 from "../images/benefits/1.svg";
 import svg2 from "../images/benefits/2.svg";
@@ -19,6 +20,13 @@ const Wrapper = styled.section`
     flex-wrap: wrap;
     row-gap: 6rem;
     column-gap: 1rem;
+
+    ${respond(
+      "phone-port",
+      css`
+        grid-template-columns: 1fr 1fr;
+      `
+    )}
   }
 
   .grid-item {

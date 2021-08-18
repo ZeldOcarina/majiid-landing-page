@@ -1,5 +1,6 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import respond from "../styles/abstracts/mediaqueries";
 
 import { useStaticQuery, graphql } from "gatsby";
 
@@ -12,6 +13,13 @@ const Wrapper = styled.section`
   .new-title {
     width: 60%;
     margin-top: 0;
+
+    ${respond(
+      "tab-port",
+      css`
+        width: 100%;
+      `
+    )}
   }
 
   hr {

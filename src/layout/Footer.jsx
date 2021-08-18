@@ -1,5 +1,6 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import respond from "../styles/abstracts/mediaqueries";
 
 import { Link } from "gatsby";
 import { darken } from "polished";
@@ -17,6 +18,15 @@ const Wrapper = styled.footer`
   .top-container {
     display: flex;
     justify-content: space-between;
+
+    ${respond(
+      "phone-port",
+      css`
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+      `
+    )}
   }
 
   a {
@@ -40,11 +50,13 @@ const Wrapper = styled.footer`
 `;
 
 const Footer = () => {
+  const isMobile = window.matchMedia("screen and (max-width: 28.125em)").matches;
+  console.log(isMobile);
   return (
     <Wrapper>
       <div className="container top-container">
         <div>
-          &copy; {new Date().getFullYear()} Viva Concepts. All Rights Reserved.
+          &copy; {new Date().getFullYear()} Viva Concepts.{isMobile && <br />} All Rights Reserved.
         </div>
         <div>
           <Link to="/privacy">Privacy</Link>

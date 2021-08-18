@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { darken } from "polished";
+import respond from "../styles/abstracts/mediaqueries";
 
 import useSiteMetadata from "../hooks/use-site-metadata";
 
@@ -13,6 +14,13 @@ const Wrapper = styled.nav`
   .container {
     display: flex;
     justify-content: flex-end;
+
+    ${respond(
+      "phone-port",
+      css`
+        justify-content: center;
+      `
+    )}
   }
 
   .ul {

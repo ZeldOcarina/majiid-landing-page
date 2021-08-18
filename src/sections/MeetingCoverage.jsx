@@ -1,16 +1,31 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
+import respond from "../styles/abstracts/mediaqueries";
 
 import SectionTitle from "../components/SectionTitle";
 
 const Wrapper = styled.section`
+  ${respond(
+    "phone-port",
+    css`
+      font-size: 1.8rem;
+    `
+  )}
+
   .image {
     width: 100%;
   }
 
   .text-container {
     width: 80%;
+
+    ${respond(
+      "phone-port",
+      css`
+        width: 100%;
+      `
+    )}
   }
 
   p {
@@ -50,23 +65,17 @@ const MeetingCoverage = () => {
         />
         <div className="text-container">
           <p className="mt-4">
-            Again, thesis for Dentists and dental practices that want to scale
-            and operate their office with an entrepreneurial approach
+            Again, thesis for Dentists and dental practices that want to scale and operate their office with an
+            entrepreneurial approach
           </p>
-          <p className="bold">
-            Here's what we are going to cover on our meeting:
-          </p>
+          <p className="bold">Here's what we are going to cover on our meeting:</p>
           <ul className="dashed">
             <li>Learn about your current state and business structure.</li>
-            <li>
-              Find gaps in your current process if there are any (hopefully not
-              many).
-            </li>
+            <li>Find gaps in your current process if there are any (hopefully not many).</li>
             <li>Explain how to fill those gaps.</li>
             <li>
-              Go over the solutions to speed up your growth, fix the gaps and
-              enable you to increase your revenue by $500,000 to
-              $1,000,000/year. No joke.{" "}
+              Go over the solutions to speed up your growth, fix the gaps and enable you to increase your revenue by
+              $500,000 to $1,000,000/year. No joke.{" "}
             </li>
           </ul>
 
