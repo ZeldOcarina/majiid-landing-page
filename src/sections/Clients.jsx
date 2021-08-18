@@ -14,8 +14,14 @@ const Wrapper = styled.section`
   .dentists-gallery {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 2rem;
     flex-wrap: wrap;
+  }
+
+  .dentist-logo {
+    width: 13rem;
+    //height: auto;
   }
 
   .btn {
@@ -53,7 +59,7 @@ const Clients = () => {
                 file: { url },
               },
             }) => {
-              return <img src={"https:" + url} alt={name} key={id} />;
+              return <img src={"https:" + url} alt={name} key={id} className="dentist-logo" />;
             }
           )}
         </div>
