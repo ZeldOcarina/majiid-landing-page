@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import respond from "../styles/abstracts/mediaqueries";
+import { useMediaQuery } from "react-responsive";
 
 import { Link } from "gatsby";
 import { darken } from "polished";
@@ -50,8 +51,7 @@ const Wrapper = styled.footer`
 `;
 
 const Footer = () => {
-  const isMobile = window.matchMedia("screen and (max-width: 28.125em)").matches;
-  console.log(isMobile);
+  const isMobile = useMediaQuery({ query: "(max-width: 28.125em)" });
   return (
     <Wrapper>
       <div className="container top-container">
