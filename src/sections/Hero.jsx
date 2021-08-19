@@ -10,6 +10,10 @@ const Wrapper = styled.section`
   padding: 4rem 0;
   text-align: center;
 
+  h1 {
+    margin-top: 1rem;
+  }
+
   p {
     margin-bottom: 4rem;
   }

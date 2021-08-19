@@ -1,7 +1,11 @@
 import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
 import styled, { css } from "styled-components";
+import { getImage } from "gatsby-plugin-image";
+
 import SectionTitle from "../components/SectionTitle";
-import { StaticImage } from "gatsby-plugin-image";
+import Video from "../components/Video";
+
 import respond from "../styles/abstracts/mediaqueries";
 
 import Button from "../components/Button";
@@ -10,27 +14,12 @@ const Wrapper = styled.section`
   padding-top: 0;
 
   .image-container {
-    width: 40rem;
-
-    ${respond(
-      "tab-port",
-      css`
-        width: 70%;
-        margin: 0 auto;
-      `
-    )}
-    ${respond(
-      "phone-port",
-      css`
-        width: 100%;
-        margin: 0 auto;
-      `
-    )}
+    width: 100%;
   }
 
   .background-container {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1.5fr 1fr;
 
     ${respond(
       "tab-land",
@@ -51,16 +40,10 @@ const Wrapper = styled.section`
     margin-bottom: 2rem;
   }
 
-  .founder-title {
+  .image-caption {
     text-align: center;
-    margin: 6rem 0 4rem 0;
-
-    ${respond(
-      "phone-port",
-      css`
-        margin: 3rem 0 0 0;
-      `
-    )}
+    margin-top: 1rem;
+    font-style: italic;
   }
 
   .btn {
@@ -78,17 +61,18 @@ const Wrapper = styled.section`
 `;
 
 const Background = () => {
+  const data = useStaticQuery(query);
+  const image = getImage(data.file);
+
   return (
     <Wrapper>
       <div className="container">
         <SectionTitle title="background" />
         <div className="background-container">
-          <StaticImage
-            src="../images/image-placeholder-2.png"
-            alt="Image placeholder"
-            className="image-container"
-            layout="constrained"
-          />
+          <figure>
+            <Video image={image} alt="Majid" video="589177133" />
+            <figcaption className="image-caption">Viva Concept Founder</figcaption>
+          </figure>
 
           <div className="right-column">
             <h4>From Dry-cleaning clerk to $250 mln exit</h4>
@@ -101,11 +85,21 @@ const Background = () => {
             </p>
           </div>
         </div>
-        <h3 className="founder-title">Viva Concept Founder</h3>
+
         <Button className="btn">ready to grow?</Button>
       </div>
     </Wrapper>
   );
 };
+
+export const query = graphql`
+  {
+    file(name: { eq: "majid-image-2" }) {
+      childImageSharp {
+        gatsbyImageData(placeholder: TRACED_SVG, layout: CONSTRAINED)
+      }
+    }
+  }
+`;
 
 export default Background;

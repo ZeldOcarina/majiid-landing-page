@@ -6,8 +6,7 @@ import respond from "../styles/abstracts/mediaqueries";
 import Button from "../components/Button";
 
 const Wrapper = styled.section`
-  margin-top: 4rem;
-
+  padding-top: 2rem;
   h3 {
   }
 
@@ -37,7 +36,7 @@ const Wrapper = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5rem;
+    gap: 2rem;
   }
 `;
 

@@ -9,7 +9,8 @@ import useSiteMetadata from "../hooks/use-site-metadata";
 const Wrapper = styled.nav`
   background-color: var(--color-primary);
   color: var(--white);
-  padding: 3rem 0;
+  padding: 1rem 0;
+  font-size: 1.6rem;
 
   .container {
     display: flex;

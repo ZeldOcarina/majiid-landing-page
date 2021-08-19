@@ -14,7 +14,18 @@ const Wrapper = styled.section`
   )}
 
   .image {
-    width: 100%;
+    width: 70%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+    ${respond(
+      "phone-land",
+      css`
+        width: 100%;
+        margin-left: 0;
+        transform: translateX(0);
+      `
+    )}
   }
 
   .text-container {
@@ -57,7 +68,7 @@ const MeetingCoverage = () => {
       <div className="container">
         <SectionTitle title="Meeting Coverage" />
         <StaticImage
-          src="../images/image-placeholder-horizontal.png"
+          src="../images/zoom-call.jpg"
           alt="placeholder"
           placeholder="blurred"
           layout="constrained"

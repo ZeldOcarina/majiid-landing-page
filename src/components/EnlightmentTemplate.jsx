@@ -111,15 +111,14 @@ const EnlightmentTemplate = ({
   cta,
   thumbnail,
   last,
+  noVideo,
 }) => {
   const image = getImage(thumbnail);
-
-  console.log(image);
 
   return (
     <Wrapper last={last}>
       <article>
-        <Video image={image} alt="placeholder" />
+        <Video image={image} alt="placeholder" noVideo={noVideo} />
         <h2 className="text-center enlightment-title">{title}</h2>
         <div className="features">
           <div className="feature">

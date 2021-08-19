@@ -58,7 +58,8 @@ const VideoOverlayWrapper = styled.div`
   }
 `;
 
-const VideoOverlay = ({ videoId, playing, setPlaying }) => {
+const VideoOverlay = ({ videoId, _, setPlaying }) => {
+  console.log(videoId);
   const [player, setPlayer] = useState(undefined);
   useEffect(() => {
     const newPlayer = new Player("video-iframe", {
@@ -80,14 +81,14 @@ const VideoOverlay = ({ videoId, playing, setPlaying }) => {
   );
 };
 
-const Video = ({ image, alt, video }) => {
+const Video = ({ image, alt, video, noVideo }) => {
   const [playing, setPlaying] = useState(false);
 
   return (
     <Wrapper className="video-wrapper">
       <GatsbyImage image={image} alt={alt} />
       {/* eslint-disable-next-line */}
-      <img src={playIcon} alt="Play icon" className="play-icon" onClick={() => setPlaying(true)} />
+      {!noVideo && <img src={playIcon} alt="Play icon" className="play-icon" onClick={() => setPlaying(true)} />}
       {playing && <VideoOverlay {...{ videoId: video, playing, setPlaying }} />}
     </Wrapper>
   );

@@ -39,13 +39,7 @@ const Enlightment = () => {
         />
         {enlightmentArticles.map((article, i) => {
           const last = i + 1 === enlightmentArticles.length;
-          return (
-            <EnlightmentTemplate
-              {...article}
-              key={article.contentful_id}
-              last={last}
-            />
-          );
+          return <EnlightmentTemplate {...article} key={article.contentful_id} last={last} noVideo />;
         })}
       </div>
     </Wrapper>

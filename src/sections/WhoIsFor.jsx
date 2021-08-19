@@ -82,7 +82,13 @@ const WhoIsFor = () => {
             </p>
           </div>
 
-          <StaticImage src="../images/majid-image.jpg" layout="constrained" placeholder="tracedSVG" className="image" />
+          <StaticImage
+            src="../images/majid-image.jpg"
+            layout="constrained"
+            placeholder="tracedSVG"
+            className="image"
+            alt="Majid looking at his products in a nice studio"
+          />
         </div>
       </div>
     </Wrapper>

@@ -63,6 +63,7 @@ const query = graphql`
         quote {
           raw
         }
+        videoUrl
       }
     }
   }

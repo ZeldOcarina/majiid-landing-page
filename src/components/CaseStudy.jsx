@@ -81,18 +81,19 @@ const Wrapper = styled.article`
   }
 `;
 
-const CaseStudy = ({ companyName, description, features, companyLogo, videoThumbnail, quote, last }) => {
+const CaseStudy = ({ companyName, description, features, companyLogo, videoThumbnail, quote, last, videoUrl }) => {
   const logo = companyLogo.file.url;
   const parsedQuote = JSON.parse(quote.raw).content[0].content[0].value;
   const parsedDescription = JSON.parse(description.raw).content[0].content[0].value;
   const image = getImage(videoThumbnail);
+  console.log(videoUrl);
   return (
     <>
       <Wrapper>
         <h3>{companyName}</h3>
         <div className="grid-container">
           <div className="left-container">
-            <Video image={image} alt="placeholder image" />
+            <Video image={image} alt="placeholder image" video={videoUrl} />
             <blockquote>{parsedQuote}</blockquote>
             <p>{parsedDescription}</p>
           </div>
@@ -102,7 +103,7 @@ const CaseStudy = ({ companyName, description, features, companyLogo, videoThumb
               {features.map(({ intro, text }, i) => {
                 return (
                   <li key={i}>
-                    <span class="bold">{intro}</span>
+                    <span className="bold">{intro}</span>
                     {text}
                   </li>
                 );
