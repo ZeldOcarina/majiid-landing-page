@@ -23,14 +23,8 @@ const Wrapper = styled.section`
 
   .background-container {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
-
-    ${respond(
-      "tab-land",
-      css`
-        gap: 4rem;
-      `
-    )}
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
 
     ${respond(
       "tab-port",
