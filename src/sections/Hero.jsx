@@ -35,7 +35,7 @@ const Wrapper = styled.section`
 const Hero = () => {
   const data = useStaticQuery(graphql`
     {
-      file(name: { eq: "video-thumb" }) {
+      file(name: { eq: "hero-thumb" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
         }
@@ -50,7 +50,7 @@ const Hero = () => {
       <div className="container">
         <h1>The #1 Mentor in the world for dental practices.</h1>
         <p>Our program adds $500,000 to $1,000,000 for each office you manage in 12 month or less.</p>
-        {<Video image={image} alt="blue rectangle" />}
+        <Video image={image} alt="blue rectangle" video="589138954" />
       </div>
     </Wrapper>
   );

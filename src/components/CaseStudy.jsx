@@ -81,19 +81,10 @@ const Wrapper = styled.article`
   }
 `;
 
-const CaseStudy = ({
-  companyName,
-  description,
-  features,
-  companyLogo,
-  videoThumbnail,
-  quote,
-  last,
-}) => {
+const CaseStudy = ({ companyName, description, features, companyLogo, videoThumbnail, quote, last }) => {
   const logo = companyLogo.file.url;
   const parsedQuote = JSON.parse(quote.raw).content[0].content[0].value;
-  const parsedDescription = JSON.parse(description.raw).content[0].content[0]
-    .value;
+  const parsedDescription = JSON.parse(description.raw).content[0].content[0].value;
   const image = getImage(videoThumbnail);
   return (
     <>
@@ -106,14 +97,15 @@ const CaseStudy = ({
             <p>{parsedDescription}</p>
           </div>
           <aside>
-            <img
-              src={`https:${logo}`}
-              alt={`${companyName} logo`}
-              className="logo"
-            />
+            <img src={`https:${logo}`} alt={`${companyName} logo`} className="logo" />
             <ul className="features">
-              {features.map(({ content }, i) => {
-                return <li key={i}>{content}</li>;
+              {features.map(({ intro, text }, i) => {
+                return (
+                  <li key={i}>
+                    <span class="bold">{intro}</span>
+                    {text}
+                  </li>
+                );
               })}
             </ul>
             <Button text="schedule your consultation" />

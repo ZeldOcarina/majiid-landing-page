@@ -49,7 +49,7 @@ const Clients = () => {
   return (
     <Wrapper>
       <div className="container">
-        <h3 className="text-center">More than 250 Dentals practices on their way to break 7 figures and counting</h3>
+        <h3 className="text-center">More than 250 Dentals practices are using us to scale their business</h3>
         <div className="dentists-gallery">
           {dentists.map(
             ({

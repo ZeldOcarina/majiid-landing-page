@@ -17,13 +17,20 @@ const CaseStudies = () => {
   const {
     allContentfulCaseStudy: { caseStudies },
   } = useStaticQuery(query);
+
+  const mintDentalLoft = caseStudies.find((caseStudy) => {
+    return caseStudy.companyName === "Mint Dental Loft";
+  });
+
   return (
     <Wrapper id="case-studies">
       <div className="container">
         <SectionTitle title="case studies" />
         <div className="case-studies-container">
+          <CaseStudy {...mintDentalLoft} />
           {caseStudies.map((item, i) => {
             const last = caseStudies.length === i + 1;
+            if (item.companyName === "Mint Dental Loft") return null;
             return <CaseStudy {...item} key={item.contentful_id} last={last} />;
           })}
         </div>
@@ -38,11 +45,12 @@ const query = graphql`
       caseStudies: nodes {
         companyName
         contentful_id
+        features {
+          intro
+          text
+        }
         description {
           raw
-        }
-        features {
-          content
         }
         companyLogo {
           file {
