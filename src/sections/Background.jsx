@@ -17,6 +17,10 @@ const Wrapper = styled.section`
     width: 100%;
   }
 
+  .video-wrapper {
+    width: 100%;
+  }
+
   .background-container {
     display: grid;
     grid-template-columns: 1.5fr 1fr;

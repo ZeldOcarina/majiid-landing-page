@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { GatsbyImage } from "gatsby-plugin-image";
 import Player from "@vimeo/player";
+import respond from "../styles/abstracts/mediaqueries";
 
 import { MdClose } from "react-icons/md";
 import playIcon from "../images/icons/play-icon.svg";
@@ -51,6 +52,15 @@ const VideoOverlayWrapper = styled.div`
     right: 8rem;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
+
+    ${respond(
+      "phone-land",
+      css`
+        font-size: 5rem;
+        right: 5rem;
+        top: 5rem;
+      `
+    )}
 
     &:hover {
       transform: scale(1.1);
