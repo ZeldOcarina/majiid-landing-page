@@ -44,7 +44,7 @@ const Wrapper = styled.article`
   }
 
   .logo {
-    width: 20%;
+    width: 30%;
     margin-bottom: 2rem;
 
     ${respond(
