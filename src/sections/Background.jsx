@@ -68,12 +68,12 @@ const Background = () => {
         <SectionTitle title="background" />
         <div className="background-container">
           <figure>
-            <Video image={image} alt="Majid" video="589177133" />
+            <Video image={image} alt="Majid" video="589910921" />
             <figcaption className="image-caption">Viva Concept Founder</figcaption>
           </figure>
 
           <div className="right-column">
-            <h4>From Dry-cleaning clerk to $250 mln exit</h4>
+            <h4>From Dry-Cleaning Clerk to $300 Mln Businesses</h4>
             <p>
               "I wasn’t born with a silver spoon, I had to work hard for everything I have. Some of my successes include
               NeoPets, SpeedyClick and few other businesses. I have almost always been operating in the marketing space
