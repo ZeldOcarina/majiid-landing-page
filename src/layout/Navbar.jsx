@@ -51,9 +51,9 @@ const Navbar = () => {
           {navbarLinks.map(({ name, url }, i) => {
             return (
               <li key={i} className="li">
-                <Link to={`/${url}`} className="link">
+                <a href={`${url}`} className="link">
                   {name}
-                </Link>
+                </a>
               </li>
             );
           })}

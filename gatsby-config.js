@@ -6,11 +6,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
     title: "Majiid Landing Page",
-    navbarLinks: [
-      { name: "channel", url: "channel" },
-      { name: "sign in", url: "sign-in" },
-      { name: "get a price", url: "get-price" },
-    ],
+    navbarLinks: [{ name: "schedule a call", url: "https://google.com" }],
   },
   plugins: [
     "gatsby-plugin-styled-components",

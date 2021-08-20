@@ -66,7 +66,7 @@ const MeetingCoverage = () => {
   return (
     <Wrapper>
       <div className="container">
-        <SectionTitle title="Meeting Coverage" />
+        <SectionTitle title="We help you find your gaps" />
         <StaticImage
           src="../images/zoom-call.jpg"
           alt="placeholder"

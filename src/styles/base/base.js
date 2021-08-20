@@ -102,6 +102,13 @@ p {
 
 section {
   padding: 5rem 0;
+
+  ${respond(
+    "phone-land",
+    css`
+      padding: 2rem 0;
+    `
+  )}
 }
 
 a {

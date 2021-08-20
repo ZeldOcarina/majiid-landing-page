@@ -18,7 +18,8 @@ const Wrapper = styled.footer`
 
   .top-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 2rem;
 
     ${respond(
       "phone-port",
@@ -26,6 +27,7 @@ const Wrapper = styled.footer`
         flex-direction: column;
         gap: 2rem;
         text-align: center;
+        justify-content: space-between;
       `
     )}
   }

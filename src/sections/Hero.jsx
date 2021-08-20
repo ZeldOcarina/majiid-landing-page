@@ -7,7 +7,6 @@ import respond from "../styles/abstracts/mediaqueries";
 import Video from "../components/Video";
 
 const Wrapper = styled.section`
-  padding: 4rem 0;
   text-align: center;
 
   h1 {
