@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import styled, { css } from "styled-components";
 import { GatsbyImage } from "gatsby-plugin-image";
-import { v4 as uuidv4 } from "uuid";
 
 import Player from "@vimeo/player";
 import respond from "../styles/abstracts/mediaqueries";
@@ -38,21 +37,23 @@ const Wrapper = styled.div`
 `;
 
 const Video = ({ image, alt, video, noVideo }) => {
-  const [playerId, _] = useState(uuidv4());
+  const playerRef = useRef();
 
   useEffect(() => {
     if (!video) return;
-    console.log(playerId);
-    const newPlayer = new Player(playerId, {
-      video,
-    });
-  }, [playerId, video]);
+    try {
+      new Player(playerRef.current, {
+        video,
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  }, [video]);
 
   return (
     <Wrapper className="video-wrapper">
-      <div id={playerId} data-vimeo-id={video}></div>
+      <div ref={playerRef} data-vimeo-id={video}></div>
       {noVideo && <GatsbyImage image={image} alt={alt} />}
-      {/* {!noVideo && <img src={playIcon} alt="Play icon" className="play-icon" onClick={() => setPlaying(true)} />} */}
     </Wrapper>
   );
 };
