@@ -6,6 +6,7 @@ import { useMediaQuery } from "react-responsive";
 
 import Button from "./Button";
 import Video from "./Video";
+import ImageVideo from "./ImageVideo";
 
 const Wrapper = styled.article`
   .grid-container {
@@ -99,7 +100,17 @@ const Wrapper = styled.article`
   }
 `;
 
-const CaseStudy = ({ companyName, description, features, companyLogo, videoThumbnail, quote, last, videoUrl }) => {
+const CaseStudy = ({
+  companyName,
+  description,
+  features,
+  companyLogo,
+  videoThumbnail,
+  quote,
+  last,
+  videoUrl,
+  hasImageVideo,
+}) => {
   const isTabPort = useMediaQuery({ query: "(max-width: 56.25em)" });
   const logo = companyLogo.file.url;
   const parsedQuote = JSON.parse(quote.raw).content[0].content[0].value;
@@ -112,7 +123,11 @@ const CaseStudy = ({ companyName, description, features, companyLogo, videoThumb
         <h3>{companyName}</h3>
         <div className="grid-container">
           <div className="left-container">
-            <Video image={image} alt="placeholder image" video={videoUrl} />
+            {hasImageVideo ? (
+              <ImageVideo image={image} alt="placeholder image" video={videoUrl} />
+            ) : (
+              <Video image={image} alt="placeholder image" video={videoUrl} />
+            )}
             <blockquote>{parsedQuote}</blockquote>
             <p>{parsedDescription}</p>
             {isTabPort && <Button text="schedule your consultation" />}

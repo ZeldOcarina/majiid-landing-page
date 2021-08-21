@@ -44,6 +44,7 @@ const Video = ({ image, alt, video, noVideo }) => {
     try {
       new Player(playerRef.current, {
         video,
+        width: 500,
       });
     } catch (err) {
       console.log(err);

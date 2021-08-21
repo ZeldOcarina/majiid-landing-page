@@ -64,6 +64,7 @@ const query = graphql`
           raw
         }
         videoUrl
+        hasImageVideo
       }
     }
   }
