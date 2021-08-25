@@ -1,12 +1,20 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import respond from "../../styles/abstracts/mediaqueries";
 
 import CallCaseStudy from "../../components/CallCaseStudy";
 
 const Wrapper = styled.section`
   background-color: var(--color-primary-light);
   text-align: center;
+
+  ${respond(
+    "tab-port",
+    css`
+      padding: 7rem 0;
+    `
+  )}
 
   .subtitle {
     font-weight: 700;
@@ -21,6 +29,13 @@ const Wrapper = styled.section`
     width: 45%;
     margin: 0 auto;
     font-size: 1.8rem;
+
+    ${respond(
+      "phone-port",
+      css`
+        width: 90%;
+      `
+    )}
   }
 
   .case-studies-title {
@@ -31,6 +46,13 @@ const Wrapper = styled.section`
   .case-studies {
     display: flex;
     gap: 3rem;
+
+    ${respond(
+      "tab-port",
+      css`
+        flex-wrap: wrap;
+      `
+    )}
   }
 `;
 

@@ -1,14 +1,29 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import respond from "../../styles/abstracts/mediaqueries";
 
 import SectionTitle from "../../components/SectionTitle";
 
 const Wrapper = styled.section`
+  ${respond(
+    "tab-port",
+    css`
+      padding: 7rem 0;
+    `
+  )}
+
   .questions-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 4rem;
+
+    ${respond(
+      "phone-port",
+      css`
+        grid-template-columns: 1fr;
+      `
+    )}
 
     .question-box {
       .question {

@@ -1,7 +1,8 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { graphql, useStaticQuery } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
+import respond from "../../styles/abstracts/mediaqueries";
 
 import ImageVideo from "../../components/ImageVideo";
 
@@ -10,6 +11,15 @@ const Wrapper = styled.section`
   h2 {
     text-transform: uppercase;
     margin-bottom: 2rem;
+  }
+
+  .video-wrapper {
+    ${respond(
+      "phone-port",
+      css`
+        width: 100% !important;
+      `
+    )}
   }
 `;
 

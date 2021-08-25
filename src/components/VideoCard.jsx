@@ -1,12 +1,29 @@
 import { getImage } from "gatsby-plugin-image";
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import respond from "../styles/abstracts/mediaqueries";
 
 import ImageVideo from "./ImageVideo";
 
 const Wrapper = styled.article`
   box-shadow: var(--cards-shadow);
   border-radius: 10px;
+
+  ${respond(
+    "tab-port",
+    css`
+      width: calc(50% - 3rem);
+      margin: 0 auto;
+    `
+  )}
+  ${respond(
+    "phone-port",
+    css`
+      width: 90%;
+      margin: 0 auto;
+    `
+  )}
+
   .video-wrapper {
     width: 100%;
     border-top-left-radius: 10px;

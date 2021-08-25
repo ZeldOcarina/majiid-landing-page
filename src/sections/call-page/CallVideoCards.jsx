@@ -1,6 +1,7 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { graphql, useStaticQuery } from "gatsby";
+import respond from "../../styles/abstracts/mediaqueries";
 
 import VideoCard from "../../components/VideoCard";
 import ImageCard from "../../components/ImageCard";
@@ -8,6 +9,7 @@ import ImageCard from "../../components/ImageCard";
 const Wrapper = styled.section`
   text-align: center;
   padding: 0 0 6rem 0;
+
   h2 {
     text-transform: uppercase;
     margin-bottom: 5rem;
@@ -17,6 +19,14 @@ const Wrapper = styled.section`
     display: flex;
     gap: 3rem;
     margin-bottom: 6rem;
+
+    ${respond(
+      "tab-port",
+      css`
+        flex-wrap: wrap;
+        gap: 3rem;
+      `
+    )}
   }
 `;
 

@@ -1,11 +1,26 @@
 import { getImage } from "gatsby-plugin-image";
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { GatsbyImage } from "gatsby-plugin-image";
+import respond from "../styles/abstracts/mediaqueries";
 
 import Button from "./Button";
 
 const Wrapper = styled.article`
+  ${respond(
+    "tab-port",
+    css`
+      width: calc(50% - 3rem);
+      margin: 0 auto;
+    `
+  )}
+  ${respond(
+    "phone-port",
+    css`
+      width: 90%;
+      margin: 0 auto;
+    `
+  )}
   .card {
     box-shadow: var(--cards-shadow);
     background-color: var(--white);
