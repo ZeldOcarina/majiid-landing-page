@@ -3,11 +3,11 @@ require("./src/scss/index.scss");
 const Layout = require("./src/layout/Layout").default;
 const GlobalStyles = require("./src/styles/global-styles").default;
 
-exports.wrapPageElement = ({ element }) => {
+exports.wrapPageElement = (props) => {
   return (
     <>
       <GlobalStyles />
-      <Layout>{element}</Layout>
+      <Layout location={props.props}>{props.element}</Layout>
     </>
   );
 };

@@ -6,6 +6,7 @@ export default createGlobalStyle`
     --body-background: #ffffff;
     --color-primary: #4587D5;
     --color-primary-dark: #007BFF;
+    --color-primary-light: #F3F9FF;
 ;   --black: #000000;
     --white: #ffffff;
 
@@ -27,5 +28,8 @@ export default createGlobalStyle`
     //SECTIONS
     --section-width: 70%;
     --laptop-container: 80%;
+
+    //SHADOWS
+    --cards-shadow: 3px 3px 22px -12px rgba(0, 0, 0, 0.42)
   }
 `;
