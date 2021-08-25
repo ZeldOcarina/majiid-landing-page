@@ -63,7 +63,6 @@ const VideoOverlayWrapper = styled.div`
 `;
 
 const VideoOverlay = ({ videoId, _, setPlaying }) => {
-  console.log(videoId);
   const [player, setPlayer] = useState(undefined);
   useEffect(() => {
     const newPlayer = new Player("video-iframe", {

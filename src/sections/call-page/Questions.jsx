@@ -44,15 +44,12 @@ const Questions = () => {
     allContentfulCallQuestion: { questions },
   } = useStaticQuery(query);
 
-  console.log(questions);
-
   return (
     <Wrapper>
       <div className="container">
         <SectionTitle title="Q&A" />
         <div className="questions-container">
           {questions.map(({ question, answer, id }) => {
-            console.log(answer);
             return (
               <div key={id} className="question-box">
                 <h5 className="question">{question}</h5>

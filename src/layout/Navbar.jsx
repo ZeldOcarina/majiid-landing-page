@@ -57,7 +57,7 @@ const Wrapper = styled.nav`
 
 const Navbar = ({ location }) => {
   const { navbarLinks } = useSiteMetadata();
-  if (location.location.pathname === "/") {
+  if (location?.location?.pathname === "/") {
     return (
       <Wrapper>
         <div className="container">

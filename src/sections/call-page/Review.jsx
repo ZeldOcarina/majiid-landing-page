@@ -60,7 +60,6 @@ const Review = () => {
   const {
     allContentfulCallCaseStudy: { caseStudies },
   } = useStaticQuery(query);
-  console.log(caseStudies);
 
   return (
     <Wrapper>
