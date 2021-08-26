@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
     title: "Majiid Landing Page",
-    navbarLinks: [{ name: "schedule a call", url: "/call-prep" }],
+    navbarLinks: [{ name: "schedule a call", url: "https://calendly.com/viva-concepts/schedule-a-call" }],
   },
   plugins: [
     "gatsby-plugin-styled-components",
