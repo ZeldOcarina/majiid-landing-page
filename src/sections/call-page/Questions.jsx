@@ -49,7 +49,7 @@ const Questions = () => {
       <div className="container">
         <SectionTitle title="Q&A" />
         <div className="questions-container">
-          {questions.map(({ question, answer, id }) => {
+          {questions.map(({ question, answer, id, index }) => {
             return (
               <div key={id} className="question-box">
                 <h5 className="question">{question}</h5>
@@ -65,8 +65,9 @@ const Questions = () => {
 
 const query = graphql`
   {
-    allContentfulCallQuestion {
+    allContentfulCallQuestion(sort: { fields: index, order: ASC }) {
       questions: nodes {
+        index
         question
         answer {
           answer

@@ -81,7 +81,10 @@ const Navbar = ({ location }) => {
       <div className="container">
         <span>Viva Program</span>
         <h1>Call Prep Guide</h1>
-        <p>Everything you’ll need to prepare for your call with us.</p>
+        <p>
+          Congratulations you have scheduled a meetign with the #1 Growth Firm in the dental space. Here's Everything
+          you'll need to prepare for a call with us
+        </p>
       </div>
     </InnerWrapper>
   );

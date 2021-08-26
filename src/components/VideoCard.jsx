@@ -41,19 +41,30 @@ const Wrapper = styled.article`
   h5 {
     font-size: 2rem;
   }
-  p {
+  .content {
     font-size: 1.8rem;
+    margin: 1.5rem 0;
   }
 `;
 
-const VideoCard = ({ title, subtitle, videoId, videoPlaceholder, className }) => {
+const VideoCard = ({ title, description, videoId, videoPlaceholder, className }) => {
+  const content = (description && JSON.parse(description.raw).content) || undefined;
+
   const image = getImage(videoPlaceholder);
   return (
     <Wrapper className={className && className}>
       <ImageVideo video={videoId} image={image} alt={title} />
       <div className="bottom-container">
         <h5>{title}</h5>
-        <p>{subtitle}</p>
+        {content &&
+          content.map((paragraph, i) => {
+            return (
+              <p className="content" key={i}>
+                {paragraph.content[0].value}
+              </p>
+            );
+          })}
+        {/* <div className="content" dangerouslySetInnerHTML={{ __html: description?.description || "" }}></div> */}
       </div>
     </Wrapper>
   );
