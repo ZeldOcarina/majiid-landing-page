@@ -76,8 +76,8 @@ const MeetingCoverage = () => {
         />
         <div className="text-container">
           <p className="mt-4">
-            Again, thesis for Dentists and dental practices that want to scale and operate their office with an
-            entrepreneurial approach
+            Again, this is for dentists and dental practices that want to scale and operate their office with an
+            entrepreneurial approach.
           </p>
           <p className="bold">Here's what we are going to cover on our meeting:</p>
           <ul className="dashed">
@@ -86,7 +86,7 @@ const MeetingCoverage = () => {
             <li>Explain how to fill those gaps.</li>
             <li>
               Go over the solutions to speed up your growth, fix the gaps and enable you to increase your revenue by
-              $500,000 to $1,000,000/year. No joke.{" "}
+              $500,000 to $1,000,000/year. No jokes.{" "}
             </li>
           </ul>
 

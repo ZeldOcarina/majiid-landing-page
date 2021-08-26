@@ -88,7 +88,7 @@ const content = [
   {
     image: svg6,
     content:
-      "Work with a team that has more experience than anyone in the space and has been building and expanding businesses for 30 years now generating close to $300mln",
+      "Work with a team who not only has more experience than anyone in this field, but also built businesses for 30 years which are now generating close to $300,000,000.",
     alt: "people icon",
   },
 ];

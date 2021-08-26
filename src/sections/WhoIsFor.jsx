@@ -50,27 +50,26 @@ const WhoIsFor = () => {
     <Wrapper>
       <div className="container">
         <SectionTitle title="who this is for" />
-        <h3>This program is for Dentists who know they are entrepreneurs</h3>
+        <h3>This program is for dentists who know they are entrepreneurs.</h3>
         <p>
-          My program is for dentists that know they are entrepreneurs and what to create a powerful business with
-          recurring revenues, abundance and time to live a fulfilling life. I am interested in
+          My program is for dentists that know they are entrepreneurs and want to create a powerful business with
+          recurring revenues, abundance and time to live a fulfilling life.
         </p>
-        <h3>Dentists are loosing on average $20,000 and they don’t even know it.</h3>
+        <h3>Dentists are losing on average $20,000 and they don’t even know it.</h3>
         <p>
-          "Viva’t program is designed to generate $1mln in additional revenue in 12 months or less (for each location)
-          with an exact blue print for each step of the way.
+          Viva’s program is designed to generate $1,000,000 in additional revenue in 12 months or less (for each
+          location) with an exact blueprint for each step of the way.
         </p>
         <h3>No, it’s not a gimmick.</h3>
 
         <p>
-          All my businesses are based upon spotting some inefficiency in a market, providing a solution for it and then
+          All my businesses are based upon spotting inefficiencies in a market, providing a solution for it and then
           perfecting the process.
         </p>
 
-        <p>
-          Doing the hard things to make other people’s life easier, always paid off in my life. I have noticed some HUGE
-          inefficiencies in the dental space and build an unstoppable solution for it."
-        </p>
+        <p>Doing the more difficult activities to make other lives easier always paid off in my life.</p>
+        <p>I noticed some HUGE inefficiencies in the dental space and built an unstoppable solution for it.</p>
+
         <SectionTitle title="core concept" className="bottom-title" />
         <div className="grid">
           <div className="left-column">

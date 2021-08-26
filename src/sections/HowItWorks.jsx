@@ -43,17 +43,13 @@ const HowItWorks = () => {
       <div className="container">
         <SectionTitle title="how it works" />
         <p className="bold text-center intro">
-          First we need to establish if we can work together and give you an
-          overview of the process.
+          First we establish if we can work together and give you an overview of the process.
         </p>
         <div className="grid">
           {content.map(({ content, image, alt }, i) => {
             const even = i % 2 === 0;
             return (
-              <article
-                key={i}
-                className={even ? "grid-item" : "grid-item grid-item--reverse"}
-              >
+              <article key={i} className={even ? "grid-item" : "grid-item grid-item--reverse"}>
                 <div className="img-container">
                   <img src={image} alt={alt} />
                 </div>
@@ -72,25 +68,24 @@ const content = [
     image: svg1,
     alt: "calendar icon",
     content:
-      "1. Schedule a call with our team, I try to meet and work with each and every one of our customers to onboard them successfully. I can’t promise it will be directly with me but I’ll do may best. Regardless, schedule your call",
+      "1. Schedule a call with our team: I try to meet and work with each and every one of our customers to onboard them successfully. I can’t promise it will be directly with me but I’ll do may best. Regardless, schedule your call.",
   },
   {
     image: svg2,
     alt: "handshake icon",
-    content:
-      "2. We’ll come see you. We want to see your practice and meet your team",
+    content: "2. We’ll come see you. We want to see your practice and meet your team",
   },
   {
     image: svg3,
     alt: "people with a cog",
     content:
-      "3. Set aside some time for su to work together. We take each business very seriously and want to make sure we will work well together.",
+      "3. Set aside some time for us to work together. We take each business very seriously and want to make sure we will work well together.",
   },
   {
     image: svg4,
     alt: "rocket icon",
     content:
-      "4. once we have established we can work together, we’ll onboard you implementing our programs and together we’ll get your business at a whole different level. Quickly.",
+      "4. Once we have established we can work together, we’ll onboard you by implementing our programs and together we’ll get your business at a whole different level. Quickly.",
   },
 ];
 

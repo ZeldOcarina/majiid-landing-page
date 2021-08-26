@@ -13,14 +13,11 @@ const Warning = () => {
     <Wrapper className="text-center">
       <div className="container">
         <SectionTitle title="warning" />
-        <p className="bold mb-3">
-          This is not a get rich quick process or something of that sort.
-        </p>
+        <p className="bold mb-3">This is not a get rich quick process or something of that sort.</p>
         <p>
-          We are entrepreneurs, we know hard work, and I know you know that as
-          well. We can take you from where you are to a whole new real of
-          productivity and profits, but we do it through hard work and
-          collaboration between our team and your team.
+          We are entrepreneurs. We know hard work and I know you do as well. We can take you from where you are to a
+          whole new realm of productivity and profits, but we do it through hard work and collaboration between your
+          team and our team.
         </p>
       </div>
     </Wrapper>

@@ -73,13 +73,13 @@ const Background = () => {
           </figure>
 
           <div className="right-column">
-            <h4>From Dry-Cleaning Clerk to $300 Mln Businesses</h4>
+            <h4>From Dry-Cleaning Clerk to $250,000,000 Businesses</h4>
             <p>
-              "I wasn’t born with a silver spoon, I had to work hard for everything I have. Some of my successes include
-              NeoPets, SpeedyClick and few other businesses. I have almost always been operating in the marketing space
-              and my latest creation, Viva Concepts, is going to be my greatest accomplishment. Recently my Son in Law,
-              international marketing super star Andrea d’Agostini, interviewed me at my house in Beverly Hills. I very
-              rarely give interviews, but he convinced me this is a story that can inspire others, so here you go."
+              I wasn’t born with a silver spoon, I worked hard for everything I have. Some of my successes include
+              NeoPets, SpeedyClick and more. I have almost always been operating in the marketing space and my latest
+              creation, Viva Concepts, is going to be my greatest accomplishment. Recently my son-in-law, international
+              marketing superstar Andrea d’Agostini, interviewed me at my house in Beverly Hills. I very rarely give
+              interviews, but he convinced me this is a story that can inspire others, so here you go.
             </p>
           </div>
         </div>
