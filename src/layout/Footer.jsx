@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import respond from "../styles/abstracts/mediaqueries";
 import { useMediaQuery } from "react-responsive";
 
-import { Link } from "gatsby";
+import { Link, useStaticQuery, graphql } from "gatsby";
 import { darken } from "polished";
 
 import facebookIcon from "../images/icons/fb.svg";
@@ -53,6 +53,14 @@ const Wrapper = styled.footer`
 `;
 
 const Footer = () => {
+  const {
+    site: {
+      siteMetadata: {
+        socialLinks: { facebook, instagram, twitter },
+      },
+    },
+  } = useStaticQuery(query);
+
   const isMobile = useMediaQuery({ query: "(max-width: 28.125em)" });
   return (
     <Wrapper>
@@ -65,18 +73,32 @@ const Footer = () => {
         </div>
       </div>
       <div className="container icons-container">
-        <a href="https://facebook.com">
+        <a href={facebook}>
           <img src={facebookIcon} alt="facebook" />
         </a>
-        <a href="https://instagram.com">
+        <a href={instagram}>
           <img src={instagramIcon} alt="instagram" />
         </a>
-        <a href="https://twitter.com">
+        <a href={twitter}>
           <img src={twitterIcon} alt="twitter" />
         </a>
       </div>
     </Wrapper>
   );
 };
+
+const query = graphql`
+  {
+    site {
+      siteMetadata {
+        socialLinks {
+          facebook
+          instagram
+          twitter
+        }
+      }
+    }
+  }
+`;
 
 export default Footer;

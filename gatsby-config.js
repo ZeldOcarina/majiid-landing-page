@@ -7,6 +7,11 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "Majiid Landing Page",
     navbarLinks: [{ name: "schedule a call", url: "https://calendly.com/viva-concepts/schedule-a-call" }],
+    socialLinks: {
+      facebook: "https://www.facebook.com/VivaReferralSystem",
+      instagram: "https://www.instagram.com/vivaconcepts/",
+      twitter: "https://twitter.com/viva_concepts",
+    },
   },
   plugins: [
     "gatsby-plugin-styled-components",
