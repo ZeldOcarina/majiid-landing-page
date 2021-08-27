@@ -2,7 +2,6 @@ import React from "react";
 import styled, { css } from "styled-components";
 import { darken } from "polished";
 import respond from "../styles/abstracts/mediaqueries";
-import { Link } from "gatsby";
 
 import useSiteMetadata from "../hooks/use-site-metadata";
 
@@ -65,9 +64,9 @@ const Navbar = ({ location }) => {
             {navbarLinks.map(({ name, url }, i) => {
               return (
                 <li key={i} className="li">
-                  <Link to={`${url}`} className="link">
+                  <a href={`${url}`} className="link">
                     {name}
-                  </Link>
+                  </a>
                 </li>
               );
             })}

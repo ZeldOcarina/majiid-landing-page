@@ -1,5 +1,6 @@
 import React from "react";
 
+import Seo from "../components/Seo";
 import Hero from "../sections/Hero";
 import Clients from "../sections/Clients";
 import CaseStudies from "../sections/CaseStudies";
@@ -14,6 +15,7 @@ import Warning from "../sections/Warning";
 const IndexPage = () => {
   return (
     <main>
+      <Seo />
       <Hero />
       <Clients />
       <CaseStudies />

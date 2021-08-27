@@ -62,9 +62,7 @@ const Clients = () => {
             }
           )}
         </div>
-        <Button className="btn">
-          <a href="https://calendly.com/viva-concepts/schedule-a-call">Schedule your consultation</a>
-        </Button>
+        <Button className="btn">Schedule a Call</Button>
       </div>
     </Wrapper>
   );
