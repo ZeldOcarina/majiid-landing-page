@@ -8,14 +8,16 @@ import Questions from "../sections/call-page/Questions";
 
 const CallPage = () => {
   return (
-    <main>
+    <>
       <Seo title="Viva Digital | Prepare for Your Call" />
-      <CallHero />
-      <CallVideoCards />
-      {/* <Review /> */}
-      <CaseStudies />
-      <Questions />
-    </main>
+      <main>
+        <CallHero />
+        <CallVideoCards />
+        {/* <Review /> */}
+        <CaseStudies />
+        <Questions />
+      </main>
+    </>
   );
 };
 

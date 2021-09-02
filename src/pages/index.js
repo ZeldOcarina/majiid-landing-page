@@ -14,19 +14,21 @@ import Warning from "../sections/Warning";
 
 const IndexPage = () => {
   return (
-    <main>
+    <>
       <Seo />
-      <Hero />
-      <Clients />
-      <CaseStudies />
-      <WhoIsFor />
-      <Background />
-      <Enlightment />
-      <MeetingCoverage />
-      <BenefitsAndOutcomes />
-      <HowItWorks />
-      <Warning />
-    </main>
+      <main>
+        <Hero />
+        <Clients />
+        <CaseStudies />
+        <WhoIsFor />
+        <Background />
+        <Enlightment />
+        <MeetingCoverage />
+        <BenefitsAndOutcomes />
+        <HowItWorks />
+        <Warning />
+      </main>
+    </>
   );
 };
 
