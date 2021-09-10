@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import SectionTitle from "../components/SectionTitle";
+import Button from "../components/Button";
 
 import svg1 from "../images/how-it-works/1.svg";
 import svg2 from "../images/how-it-works/2.svg";
@@ -35,6 +36,10 @@ const Wrapper = styled.section`
       justify-content: center;
     }
   }
+
+  .cta {
+    margin: 4rem auto 1rem auto;
+  }
 `;
 
 const HowItWorks = () => {
@@ -58,6 +63,9 @@ const HowItWorks = () => {
             );
           })}
         </div>
+        <Button className="cta">
+          <a href="https://calendly.com/viva-concepts/schedule-a-call">Schedule your call</a>
+        </Button>
       </div>
     </Wrapper>
   );
