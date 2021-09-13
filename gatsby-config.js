@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://www.majidtabs.com",
     title: "Majiid Landing Page",
     navbarLinks: [{ name: "schedule a call", url: "https://calendly.com/viva-concepts/schedule-a-call" }],
     socialLinks: {
