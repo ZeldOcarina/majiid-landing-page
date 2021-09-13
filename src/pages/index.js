@@ -1,6 +1,7 @@
 import React from "react";
 
 import Seo from "../components/Seo";
+import Layout from "../layout/Layout";
 import Hero from "../sections/Hero";
 import Clients from "../sections/Clients";
 import CaseStudies from "../sections/CaseStudies";
@@ -16,18 +17,20 @@ const IndexPage = () => {
   return (
     <>
       <Seo />
-      <main>
-        <Hero />
-        <Clients />
-        <CaseStudies />
-        <WhoIsFor />
-        <Background />
-        <Enlightment />
-        <MeetingCoverage />
-        <BenefitsAndOutcomes />
-        <HowItWorks />
-        <Warning />
-      </main>
+      <Layout>
+        <main>
+          <Hero />
+          <Clients />
+          <CaseStudies />
+          <WhoIsFor />
+          <Background />
+          <Enlightment />
+          <MeetingCoverage />
+          <BenefitsAndOutcomes />
+          <HowItWorks />
+          <Warning />
+        </main>
+      </Layout>
     </>
   );
 };

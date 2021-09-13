@@ -1,0 +1,33 @@
+import React from "react";
+import styled from "styled-components";
+
+const InnerWrapper = styled.section`
+  background-color: var(--color-primary);
+  color: var(--white);
+  text-align: center;
+  padding: 8rem 0;
+
+  h1 {
+    color: var(--white);
+    padding: 0;
+    margin: 1rem 0;
+    text-align: center;
+  }
+`;
+
+const InternalNavbar = () => {
+  return (
+    <InnerWrapper>
+      <div className="container">
+        <span>Viva Program</span>
+        <h1>Call Prep Guide</h1>
+        <p>
+          Congratulations you have scheduled a meetign with the #1 Growth Firm in the dental space. Here's Everything
+          you'll need to prepare for a call with us
+        </p>
+      </div>
+    </InnerWrapper>
+  );
+};
+
+export default InternalNavbar;

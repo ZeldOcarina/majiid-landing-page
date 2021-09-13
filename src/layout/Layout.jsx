@@ -1,11 +1,12 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import InternalNavbar from "./InternalNavbar";
 
-const Layout = ({ children, location }) => {
+const Layout = ({ children, location, internal }) => {
   return (
     <>
-      <Navbar location={location} />
+      {internal ? <InternalNavbar /> : <Navbar location={location} />}
       {children}
       <Footer>I am a footer</Footer>
     </>

@@ -1,4 +1,6 @@
 import React from "react";
+
+import Layout from "../layout/Layout";
 import Seo from "../components/Seo";
 import CallHero from "../sections/call-page/CallHero";
 import CallVideoCards from "../sections/call-page/CallVideoCards";
@@ -10,13 +12,15 @@ const CallPage = () => {
   return (
     <>
       <Seo title="Viva Digital | Prepare for Your Call" />
-      <main>
-        <CallHero />
-        <CallVideoCards />
-        {/* <Review /> */}
-        <CaseStudies />
-        <Questions />
-      </main>
+      <Layout internal>
+        <main>
+          <CallHero />
+          <CallVideoCards />
+          {/* <Review /> */}
+          <CaseStudies />
+          <Questions />
+        </main>
+      </Layout>
     </>
   );
 };

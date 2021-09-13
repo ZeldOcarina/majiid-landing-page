@@ -5,20 +5,6 @@ import respond from "../styles/abstracts/mediaqueries";
 
 import useSiteMetadata from "../hooks/use-site-metadata";
 
-const InnerWrapper = styled.section`
-  background-color: var(--color-primary);
-  color: var(--white);
-  text-align: center;
-  padding: 8rem 0;
-
-  h1 {
-    color: var(--white);
-    padding: 0;
-    margin: 1rem 0;
-    text-align: center;
-  }
-`;
-
 const Wrapper = styled.nav`
   background-color: var(--color-primary);
   color: var(--white);
@@ -54,38 +40,24 @@ const Wrapper = styled.nav`
   }
 `;
 
-const Navbar = ({ location }) => {
+const Navbar = () => {
   const { navbarLinks } = useSiteMetadata();
-  if (location?.location?.pathname === "/") {
-    return (
-      <Wrapper>
-        <div className="container">
-          <ul className="ul">
-            {navbarLinks.map(({ name, url }, i) => {
-              return (
-                <li key={i} className="li">
-                  <a href={`${url}`} className="link">
-                    {name}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      </Wrapper>
-    );
-  }
   return (
-    <InnerWrapper>
+    <Wrapper>
       <div className="container">
-        <span>Viva Program</span>
-        <h1>Call Prep Guide</h1>
-        <p>
-          Congratulations you have scheduled a meetign with the #1 Growth Firm in the dental space. Here's Everything
-          you'll need to prepare for a call with us
-        </p>
+        <ul className="ul">
+          {navbarLinks.map(({ name, url }, i) => {
+            return (
+              <li key={i} className="li">
+                <a href={`${url}`} className="link">
+                  {name}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
       </div>
-    </InnerWrapper>
+    </Wrapper>
   );
 };
 
