@@ -13,10 +13,10 @@ import BenefitsAndOutcomes from "../sections/BenefitsAndOutcomes";
 import HowItWorks from "../sections/HowItWorks";
 import Warning from "../sections/Warning";
 
-const IndexPage = () => {
+const IndexPage = ({ location }) => {
   return (
     <>
-      <Seo />
+      <Seo location={location} />
       <Layout>
         <main>
           <Hero />

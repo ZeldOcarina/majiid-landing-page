@@ -1,9 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { useLocation } from "@reach/router";
 
 const Seo = (props) => {
-  const location = useLocation();
   const DESCRIPTION =
     "The #1 Mentor in the world for dental practices. Our program adds $500,000 to $1,000,000 for each office you manage in 12 months or less.";
 
@@ -19,11 +17,11 @@ const Seo = (props) => {
       <meta name="theme-color" content="#ffffff" />
       <meta name="description" content={DESCRIPTION} />
       <meta name="author" content="Mattia Rasulo" />
-      <meta property="og:url" content={location.href} />
+      <meta property="og:url" content="https://www.majidtabs.com/" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={props.title || "Viva Digital"} />
       <meta property="og:description" content={DESCRIPTION} />
-      <meta property="og:image" content={`${location.origin}/og-image.png`} />
+      <meta property="og:image" content="https://www.majidtabs.com/og-image.png" />
       <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
