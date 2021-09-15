@@ -2,6 +2,9 @@ import React from "react";
 import { Helmet } from "react-helmet";
 
 const Seo = ({ title }) => {
+  const DESCRIPTION =
+    "The #1 Mentor in the world for dental practices. Our program adds $500,000 to $1,000,000 for each office you manage in 12 months or less.";
+
   return (
     <Helmet htmlAttributes={{ lang: "en" }}>
       <title>{title || "Viva Digital"}</title>
@@ -12,11 +15,17 @@ const Seo = ({ title }) => {
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
       <meta name="msapplication-TileColor" content="#2b5797" />
       <meta name="theme-color" content="#ffffff" />
-      <meta
-        name="description"
-        content="The #1 Mentor in the world for dental practices. Our program adds $500,000 to $1,000,000 for each office you manage in 12 months or less."
-      />
+      <meta name="description" content={DESCRIPTION} />
       <meta name="author" content="Mattia Rasulo" />
+      <meta property="og:url" content="https://majidtabs.com/" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={title} />
+      {<meta property="og:description" content={DESCRIPTION} />}
+      <meta property="og:image" content="/og-image.png" />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="630" />
     </Helmet>
   );
 };
