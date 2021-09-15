@@ -82,7 +82,7 @@ const MeetingCoverage = () => {
           <p className="bold">Here's what we do in our meeting:</p>
           <ul className="dashed">
             <li>Learn about your current state and business structure.</li>
-            <li>Find gaps in your current process if there are any (hopefully not many).</li>
+            <li>Find gaps in your current process - if any (hopefully not many).</li>
             <li>Explain how to fill those gaps.</li>
             <li>
               Go over the solutions to speed up your growth, fix the gaps and enable you to increase your revenue by
