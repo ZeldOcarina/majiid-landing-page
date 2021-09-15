@@ -48,7 +48,7 @@ const Clients = () => {
   return (
     <Wrapper>
       <div className="container">
-        <h3 className="text-center">More than 250 Dental Practices use us to scale their business</h3>
+        <h3 className="text-center">More than 250 Dental Practices use us to scale their businesses:</h3>
         <div className="dentists-gallery">
           {dentists.map(
             ({
