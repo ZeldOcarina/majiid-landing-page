@@ -1,13 +1,15 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { useLocation } from "@reach/router";
 
-const Seo = ({ title }) => {
+const Seo = (props) => {
+  const location = useLocation();
   const DESCRIPTION =
     "The #1 Mentor in the world for dental practices. Our program adds $500,000 to $1,000,000 for each office you manage in 12 months or less.";
 
   return (
     <Helmet htmlAttributes={{ lang: "en" }}>
-      <title>{title || "Viva Digital"}</title>
+      <title>{props.title || "Viva Digital"}</title>
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -17,11 +19,11 @@ const Seo = ({ title }) => {
       <meta name="theme-color" content="#ffffff" />
       <meta name="description" content={DESCRIPTION} />
       <meta name="author" content="Mattia Rasulo" />
-      <meta property="og:url" content="https://majidtabs.com/" />
+      <meta property="og:url" content={location.href} />
       <meta property="og:type" content="website" />
-      <meta property="og:title" content={title} />
-      {<meta property="og:description" content={DESCRIPTION} />}
-      <meta property="og:image" content="/og-image.png" />
+      <meta property="og:title" content={props.title || "Viva Digital"} />
+      <meta property="og:description" content={DESCRIPTION} />
+      <meta property="og:image" content={`${location.origin}/og-image.png`} />
       <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />

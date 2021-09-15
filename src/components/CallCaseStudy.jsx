@@ -86,8 +86,8 @@ const CallCaseStudy = ({
           <img src={`https:${logoImage}`} alt={name} />
         </div>
       </div>
-      <Button className="cta">
-        <a href={url}>{cta}</a>
+      <Button className="cta" url={url}>
+        {cta}
       </Button>
     </Wrapper>
   );

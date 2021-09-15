@@ -63,8 +63,8 @@ const HowItWorks = () => {
             );
           })}
         </div>
-        <Button className="cta">
-          <a href="https://calendly.com/viva-concepts/schedule-a-call">Schedule your call</a>
+        <Button className="cta" url="https://calendly.com/viva-concepts/schedule-a-call">
+          Schedule your call
         </Button>
       </div>
     </Wrapper>
