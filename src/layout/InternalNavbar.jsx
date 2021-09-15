@@ -22,7 +22,7 @@ const InternalNavbar = () => {
         <span>Viva Program</span>
         <h1>Call Prep Guide</h1>
         <p>
-          Congratulations you have scheduled a meetign with the #1 Growth Firm in the dental space. Here's Everything
+          Congratulations you have scheduled a meeting with the #1 Growth Firm in the dental space. Here's Everything
           you'll need to prepare for a call with us
         </p>
       </div>

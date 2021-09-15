@@ -51,7 +51,7 @@ const Hero = () => {
   return (
     <Wrapper>
       <div className="container">
-        <h1>The #1 Mentor in the world for dental practices.</h1>
+        <h1>The #1 Mentor in the World for Dental Practices</h1>
         <p>Our program adds $500,000 to $1,000,000 for each office you manage in 12 months or less.</p>
         <Video image={image} alt="blue rectangle" video="589909707" />
       </div>

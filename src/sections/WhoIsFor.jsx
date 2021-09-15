@@ -49,7 +49,7 @@ const WhoIsFor = () => {
   return (
     <Wrapper>
       <div className="container">
-        <SectionTitle title="who this is for" />
+        <SectionTitle title="Who is this For" />
         <h3>This program is for dentists who know they are entrepreneurs.</h3>
         <p>
           My program is for dentists that know they are entrepreneurs and want to create a powerful business with

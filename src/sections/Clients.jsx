@@ -62,7 +62,7 @@ const Clients = () => {
             }
           )}
         </div>
-        <Button className="btn">Schedule a Call</Button>
+        <Button className="btn">Schedule Your Consultation</Button>
       </div>
     </Wrapper>
   );

@@ -34,7 +34,7 @@ const Enlightment = () => {
     <Wrapper>
       <div className="container">
         <SectionTitle
-          title="How Does Viva Program Scale Your business and sets you up for retirement?"
+          title="How Does the Viva Program Scale Your Business and Set You Up for Retirement?"
           className="new-title"
         />
         {enlightmentArticles.map((article, i) => {
