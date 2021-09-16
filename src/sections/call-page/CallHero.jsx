@@ -51,7 +51,7 @@ const Hero = () => {
     <Wrapper>
       <div className="container">
         <h2>Watch this video first</h2>
-        <ImageVideo image={image} alt="placeholder image" video={589909707} />
+        <ImageVideo image={image} alt="placeholder image" video={606718682} />
         <div className="text-container">
           <p>
             Majid is an innovator, with multiple successful exits and companies such as NeoPets, SpeedyClick and many
