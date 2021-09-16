@@ -43,7 +43,7 @@ const CallVideoCards = () => {
   } = useStaticQuery(query);
   return (
     <Wrapper className="container">
-      <h2>WATCH THESE 3 VIDEOS BEFORE YOUR CALL</h2>
+      <h2>WATCH THESE THREE SHORT VIDEOS</h2>
       <div className="video-cards-container">
         {cardsData.map((cardData) => {
           return <VideoCard key={cardData.id} {...cardData} />;

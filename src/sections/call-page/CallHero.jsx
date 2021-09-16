@@ -7,6 +7,7 @@ import respond from "../../styles/abstracts/mediaqueries";
 import ImageVideo from "../../components/ImageVideo";
 
 const Wrapper = styled.section`
+  padding-top: 2rem;
   text-align: center;
   h2 {
     text-transform: uppercase;
@@ -14,7 +15,7 @@ const Wrapper = styled.section`
   }
 
   .video-wrapper {
-    width: 65%;
+    width: 55%;
     ${respond(
       "phone-port",
       css`
@@ -51,7 +52,7 @@ const Hero = () => {
     <Wrapper>
       <div className="container">
         <h2>Watch this video first</h2>
-        <ImageVideo image={image} alt="placeholder image" video={606718682} />
+        <ImageVideo image={image} alt="placeholder image" video={606718682} className="small-image-video" />
         <div className="text-container">
           <p>
             Majid is an innovator, with multiple successful exits and companies such as NeoPets, SpeedyClick and many

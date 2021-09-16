@@ -44,11 +44,22 @@ const Wrapper = styled.article`
   .content {
     font-size: 1.8rem;
     margin: 1.5rem 0;
+
+    &--li {
+      margin: 1rem 0;
+      text-align: left;
+    }
+  }
+
+  ul {
+    list-style: inside;
   }
 `;
 
 const VideoCard = ({ title, description, videoId, videoPlaceholder, className }) => {
   const content = (description && JSON.parse(description.raw).content) || undefined;
+
+  //console.log(JSON.parse(description.raw).content);
 
   const image = getImage(videoPlaceholder);
   return (
@@ -57,11 +68,24 @@ const VideoCard = ({ title, description, videoId, videoPlaceholder, className })
       <div className="bottom-container">
         <h5>{title}</h5>
         {content &&
-          content.map((paragraph, i) => {
+          content.map((node, i) => {
+            if (node.nodeType === "paragraph")
+              return (
+                <p className="content" key={i}>
+                  {node.content[0].value}
+                </p>
+              );
+
             return (
-              <p className="content" key={i}>
-                {paragraph.content[0].value}
-              </p>
+              <ul key={Math.random()} className="ul">
+                {node.content.map((listItem, i) => {
+                  return (
+                    <li key={i + Math.random()} className="content content--li">
+                      {listItem.content[0].content[0].value}
+                    </li>
+                  );
+                })}
+              </ul>
             );
           })}
         {/* <div className="content" dangerouslySetInnerHTML={{ __html: description?.description || "" }}></div> */}

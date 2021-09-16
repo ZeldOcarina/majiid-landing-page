@@ -1,5 +1,6 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import respond from "../styles/abstracts/mediaqueries";
 
 const Wrapper = styled.button`
   text-transform: capitalize;
@@ -16,7 +17,14 @@ const Wrapper = styled.button`
   font-weight: 500;
   font-size: 1.6rem;
 
-  a  {
+  ${respond(
+    "phone-port",
+    css`
+      width: 100% !important;
+    `
+  )}
+
+  a {
     color: var(--white);
     display: block;
     width: 100%;
