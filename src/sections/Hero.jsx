@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled, { css } from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 import respond from "../styles/abstracts/mediaqueries";
 
 import Video from "../components/Video";
+import NoVideoContext from "../context/NoVideoContext";
+import ImageVideo from "../components/ImageVideo";
 
 const Wrapper = styled.section`
   text-align: center;
@@ -47,13 +49,18 @@ const Hero = () => {
   `);
 
   const image = getImage(data.file);
+  const noVideoContext = useContext(NoVideoContext);
 
   return (
     <Wrapper>
       <div className="container">
         <h1>The #1 Mentor in the World for Dental Practices</h1>
         <p>Our program adds $500,000 to $1,000,000 for each office you manage in 12 months or less.</p>
-        <Video image={image} alt="blue rectangle" video="606718682" />
+        {noVideoContext ? (
+          <ImageVideo image={image} alt="Viva presentation" video="606718682" vimeoH="29cd311296&amp" />
+        ) : (
+          <Video image={image} alt="blue rectangle" video="606718682" />
+        )}
       </div>
     </Wrapper>
   );

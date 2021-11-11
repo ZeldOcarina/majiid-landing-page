@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import styled, { css } from "styled-components";
 import { getImage } from "gatsby-plugin-image";
 
 import SectionTitle from "../components/SectionTitle";
 import Video from "../components/Video";
+import ImageVideo from "../components/ImageVideo";
+import NoVideoContext from "../context/NoVideoContext";
 
 import respond from "../styles/abstracts/mediaqueries";
 
@@ -61,6 +63,7 @@ const Wrapper = styled.section`
 const Background = () => {
   const data = useStaticQuery(query);
   const image = getImage(data.file);
+  const noVideoContext = useContext(NoVideoContext);
 
   return (
     <Wrapper>
@@ -68,7 +71,11 @@ const Background = () => {
         <SectionTitle title="background" />
         <div className="background-container">
           <figure>
-            <Video image={image} alt="Majid" video="589910921" />
+            {noVideoContext ? (
+              <ImageVideo image={image} alt="Majid" video="589910921" vimeoH="f28e7bd8f2&amp" />
+            ) : (
+              <Video image={image} alt="Majid" video="589910921" />
+            )}
             <figcaption className="image-caption">Viva Concept Founder</figcaption>
           </figure>
 
