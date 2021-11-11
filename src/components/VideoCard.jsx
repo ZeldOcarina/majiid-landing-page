@@ -56,7 +56,7 @@ const Wrapper = styled.article`
   }
 `;
 
-const VideoCard = ({ title, description, videoId, videoPlaceholder, className }) => {
+const VideoCard = ({ title, description, videoId, videoPlaceholder, className, vimeoH }) => {
   const content = (description && JSON.parse(description.raw).content) || undefined;
 
   //console.log(JSON.parse(description.raw).content);
@@ -64,7 +64,7 @@ const VideoCard = ({ title, description, videoId, videoPlaceholder, className })
   const image = getImage(videoPlaceholder);
   return (
     <Wrapper className={className && className}>
-      <ImageVideo video={videoId} image={image} alt={title} />
+      <ImageVideo video={videoId} image={image} alt={title} vimeoH={vimeoH} />
       <div className="bottom-container">
         <h5>{title}</h5>
         {content &&

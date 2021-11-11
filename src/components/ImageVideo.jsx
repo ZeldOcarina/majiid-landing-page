@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styled, { css } from "styled-components";
 import { GatsbyImage } from "gatsby-plugin-image";
+import axios from "axios";
+
 import Player from "@vimeo/player";
 import respond from "../styles/abstracts/mediaqueries";
 
@@ -62,11 +64,13 @@ const VideoOverlayWrapper = styled.div`
   }
 `;
 
-const VideoOverlay = ({ videoId, _, setPlaying }) => {
+const VideoOverlay = ({ videoId, _, setPlaying, vimeoH }) => {
   const [player, setPlayer] = useState(undefined);
+
   useEffect(() => {
     const newPlayer = new Player("video-iframe", {
-      videoId,
+      videoId: parseInt(videoId),
+      h: vimeoH,
     });
     setPlayer(newPlayer);
   }, [videoId]);
@@ -84,7 +88,7 @@ const VideoOverlay = ({ videoId, _, setPlaying }) => {
   );
 };
 
-const ImageVideo = ({ image, alt, video, noVideo }) => {
+const ImageVideo = ({ image, alt, video, noVideo, vimeoH }) => {
   const [playing, setPlaying] = useState(false);
 
   return (
@@ -92,7 +96,7 @@ const ImageVideo = ({ image, alt, video, noVideo }) => {
       <GatsbyImage image={image} alt={alt} />
       {/* eslint-disable-next-line */}
       {!noVideo && <img src={playIcon} alt="Play icon" className="play-icon" onClick={() => setPlaying(true)} />}
-      {playing && <VideoOverlay {...{ videoId: video, playing, setPlaying }} />}
+      {playing && <VideoOverlay {...{ videoId: video, playing, setPlaying, vimeoH }} />}
     </Wrapper>
   );
 };

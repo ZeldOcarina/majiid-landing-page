@@ -110,6 +110,7 @@ const CaseStudy = ({
   last,
   videoUrl,
   hasImageVideo,
+  vimeoH,
 }) => {
   const isTabPort = useMediaQuery({ query: "(max-width: 56.25em)" });
   const logo = companyLogo.file.url;
@@ -124,9 +125,9 @@ const CaseStudy = ({
         <div className="grid-container">
           <div className="left-container">
             {hasImageVideo ? (
-              <ImageVideo image={image} alt="placeholder image" video={videoUrl} />
+              <ImageVideo image={image} alt="placeholder image" video={videoUrl} vimeoH={vimeoH} />
             ) : (
-              <Video image={image} alt="placeholder image" video={videoUrl} />
+              <Video image={image} alt="placeholder image" video={videoUrl} vimeoH={vimeoH} />
             )}
             <blockquote>{parsedQuote}</blockquote>
             <p>{parsedDescription}</p>
