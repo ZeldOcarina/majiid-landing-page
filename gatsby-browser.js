@@ -1,18 +1,14 @@
 // gatsby-ssr.js
-const React = require("react");
-require("./src/scss/index.scss");
-const GlobalStyles = require("./src/styles/global-styles").default;
-const NoVideoContext = require("./src/context/NoVideoContext.jsx").default;
+import React from "react";
+import "./src/scss/index.scss";
+import GlobalStyles from "./src/styles/global-styles";
+import { NoVideoContextProvider } from "./src/context/NoVideoContext";
 
-exports.wrapPageElement = ({ element }) => {
-  const params = new URLSearchParams(window.location.search);
-
-  const noVideo = params.get("noVideo") === "true";
-
+export const wrapPageElement = ({ element }) => {
   return (
-    <>
+    <NoVideoContextProvider>
       <GlobalStyles />
-      <NoVideoContext.Provider value={noVideo}>{element}</NoVideoContext.Provider>
-    </>
+      {element}
+    </NoVideoContextProvider>
   );
 };
