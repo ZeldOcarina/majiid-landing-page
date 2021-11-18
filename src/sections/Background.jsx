@@ -76,7 +76,7 @@ const Background = () => {
             ) : (
               <Video image={image} alt="Majid" video="589910921" />
             )}
-            <figcaption className="image-caption">Viva Concept Founder</figcaption>
+            <figcaption className="image-caption">Viva Concepts Co-Founder</figcaption>
           </figure>
 
           <div className="right-column">
