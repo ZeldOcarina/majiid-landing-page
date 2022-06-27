@@ -20,7 +20,7 @@ const Wrapper = styled.section`
   }
 
   .video-wrapper {
-    width: 60%;
+    width: 80%;
 
     ${respond(
       "tab-land",

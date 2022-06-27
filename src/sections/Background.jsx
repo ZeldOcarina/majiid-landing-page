@@ -25,7 +25,7 @@ const Wrapper = styled.section`
 
   .background-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     gap: 4rem;
 
     ${respond(

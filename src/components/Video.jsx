@@ -24,6 +24,7 @@ const Wrapper = styled.div`
 
   iframe {
     width: 100%;
+    height: 43vh;
 
     ${respond(
       "phone-port",
